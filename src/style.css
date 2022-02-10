@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+.btn {
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.btn {
+  border: 1px solid #484848;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  color: #484848;
+  background-color: #fff;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.inVisible {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/*# sourceMappingURL=style.css.map */

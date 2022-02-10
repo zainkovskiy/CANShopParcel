@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "titleShot": "Бейдж",
+    "titleFull": "Бейдж",
+    "price": 105,
+    "backGround": "img/badge.png"
+  },
+  {
+    "id": 2,
+    "titleShot": "Ежедневник",
+    "titleFull": "Ежедневник",
+    "price": 300,
+    "backGround": "img/diary.jfif"
+  },
+  {
+    "id": 3,
+    "titleShot": "Наклейка на авто",
+    "titleFull": "Наклейка на авто 1x0.35мм",
+    "price": 315,
+    "backGround": "img/stiker.png"
+  },
+  {
+    "id": 4,
+    "titleShot": "Баннер",
+    "titleFull": "Баннер",
+    "price": [
+      {
+        "id": 4.0,
+        "price": 340,
+        "size": "2x1м"
+      },
+      {
+        "id": 4.1,
+        "price": 255,
+        "size": "1.5x0.8м"
+      },
+      {
+        "id": 4.2,
+        "price": 136,
+        "size": "1x0.7м"
+      }
+    ],
+    "backGround": "img/banner_blue.jpg",
+    "backGroundExtra": "img/banner_red.jpg"
+  },
+  {
+    "id": 6,
+    "titleShot": "Ручка",
+    "titleFull": "Ручка брендировнная (5шт)",
+    "price": 100,
+    "backGround": "img/pens.jfif"
+  },
+  {
+    "id": 7,
+    "titleShot": "Визитка",
+    "titleFull": "Визитка (96шт)",
+    "price": 192,
+    "backGround": "img/business_card.png"
+  }
+]

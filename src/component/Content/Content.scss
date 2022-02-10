@@ -1,0 +1,25 @@
+%font-regular{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.8px
+}
+
+.content{
+  &__title {
+    display: block;
+    color: #484848;
+    font-size: 26px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #484848;
+    padding: 0 0 1rem 0;
+    @extend %font-regular;
+  }
+}
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin: 2rem 0 0 0;
+}

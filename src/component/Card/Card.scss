@@ -1,0 +1,130 @@
+%font-regular{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.8px
+}
+
+
+%font-bold{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px
+}
+
+.card{
+  position: relative;
+  &:hover .card__description{
+    background-color: #393939;
+  }
+  &:hover .card__buttons{
+    display: flex;
+  }
+  &:hover .card__photo{
+    filter: brightness(33%);
+    background-color: #f7f7f7;
+  }
+  &:hover .card__description:after{
+    border-color: transparent transparent #393939 transparent;
+  }
+  &__photo{
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transition: filter .3s,
+    background-color .3s;
+  }
+  &__description{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #0c54a0;
+    gap: 0.5rem;
+    position: relative;
+    color: #fff;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    &:after{
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 15px 10px 15px;
+      border-color: transparent transparent #0c54a0 transparent;
+      left: 20px;
+      bottom: 100%;
+      position: absolute;
+      -webkit-transition: border-color .3s;
+      transition: border-color .3s;
+    }
+    &-text{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  &__check{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  &__title{
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @extend %font-regular;
+  }
+  &__price{
+    font-size: 10px;
+    @extend %font-bold;
+  }
+  &__buttons{
+    position: absolute;
+    z-index: 99;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: display .3s;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  &__btn{
+    cursor: pointer;
+    transition: box-shadow .3s,
+    color .3s,
+    background-color .3s;
+    user-select: none;
+    white-space: nowrap;
+    &:hover{
+      box-shadow: 0 0 15px 3px #fff;
+    }
+    &:active{
+      background-color: #484848;
+      color: #fff;
+    }
+  }
+}
+input[type="radio"]{
+  display: none;
+  &:checked + .banner{
+    border: 3px solid #fff;
+  }
+}
+.banner{
+  display: block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  &_blue{
+    background-color: #0c54a0;
+  }
+  &_red{
+    background-color: #d61c22;
+  }
+}

@@ -1,0 +1,49 @@
+.shop-cart__item {
+  display: grid;
+  grid-template-columns: min-content 1fr 1fr;
+  grid-gap: 1rem;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 0.5rem;
+}
+.shop-cart__item-img {
+  width: 100%;
+}
+.shop-cart__item-img_wrap {
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+.shop-cart__item-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.shop-cart__item-name {
+  display: flex;
+  align-items: center;
+}
+.shop-cart__item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.shop-cart__btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+.shop-cart__btn-minus {
+  background-image: url("../../img/round_minus.svg");
+}
+.shop-cart__btn-plus {
+  background-image: url("../../img/round_plus.svg");
+}
+
+/*# sourceMappingURL=CardBasket.css.map */
