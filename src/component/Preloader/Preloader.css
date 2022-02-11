@@ -1,0 +1,11 @@
+.preloader {
+  height: calc(100vh - 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader__img {
+  height: 20rem;
+}
+
+/*# sourceMappingURL=Preloader.css.map */
