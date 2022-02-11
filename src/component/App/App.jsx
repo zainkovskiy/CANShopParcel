@@ -18,7 +18,6 @@ class App extends Component{
     const find = shopCart.find(item => item.id === dataset.id);
     if (find) {
       find.quantity ++;
-      this.setState({cartShop: shopCart});
     } else {
       shopCart.push({
         id: dataset.id,
@@ -28,8 +27,8 @@ class App extends Component{
         background: dataset.background,
         quantity: 1
       })
-      this.setState({cartShop: shopCart});
     }
+    this.setState({cartShop: shopCart});
     this.setState({cartShopTotal: this.state.cartShopTotal + +dataset.price});
   }
   removeInCartShop = (event) => {
@@ -38,13 +37,13 @@ class App extends Component{
     const find = shopCart.find(item => item.id === dataset.id);
     if (find.quantity > 1){
       find.quantity--;
-      this.setState({cartShop: shopCart});
     } else {
       shopCart.splice(shopCart.indexOf(find), 1);
-      this.setState({cartShop: shopCart});
     }
+    this.setState({cartShop: shopCart});
     this.setState({cartShopTotal: this.state.cartShopTotal - +dataset.price});
   }
+
   render() {
     const { limit, cartShop, cardProduct, cartShopTotal } = this.state;
     return(
@@ -71,6 +70,8 @@ class App extends Component{
   }
 
   componentDidMount() {
+    this.setState({cartShop: localStorage.getItem('cartShop') ? JSON.parse(localStorage.getItem('cartShop')) : []})
+    this.setState({cartShopTotal: localStorage.getItem('cartShopTotal') ? +localStorage.getItem('cartShopTotal') : 0})
     this.setState({limit: 250});
     this.setState({cardProduct: [
         {
@@ -195,6 +196,10 @@ class App extends Component{
           background: "https://crm.centralnoe.ru/dealincom/assets/business_card.png"
         },
       ]});
+  }
+  componentDidUpdate() {
+    localStorage.setItem('cartShop', JSON.stringify(this.state.cartShop));
+    localStorage.setItem('cartShopTotal', this.state.cartShopTotal);
   }
 }
 
