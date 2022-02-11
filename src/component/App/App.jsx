@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Header from '../Header/Header';
 import Cash from '../Cash/Cash';
 import Content from "../Content/Content";
+import Preloader from "../Preloader/Preloader";
 
 class App extends Component{
   state = {
@@ -62,7 +63,9 @@ class App extends Component{
               cardProduct={cardProduct}
               addInCartShop={this.addInCartShop}
             />
-          </> : <p>404</p> }
+          </> :
+            <Preloader/>
+        }
       </>
     )
   }
@@ -192,11 +195,6 @@ class App extends Component{
           background: "https://crm.centralnoe.ru/dealincom/assets/business_card.png"
         },
       ]});
-    fetch('https://raw.githubusercontent.com/zainkovskiy/CANShopParcel/2517e8d1cee4021070ea276e77f47de3b3e206da/cardList.json').then(res => {
-      res.json().then(data => {
-        console.log(data)
-      })
-    })
   }
 }
 

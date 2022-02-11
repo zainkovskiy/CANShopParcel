@@ -14,6 +14,7 @@
 
 .card {
   position: relative;
+  border-radius: 5px;
 }
 .card:hover .card__description {
   background-color: #393939;
@@ -29,11 +30,12 @@
   border-color: transparent transparent #393939 transparent;
 }
 .card__photo {
-  height: 250px;
+  height: 14rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   transition: filter 0.3s, background-color 0.3s;
+  border-radius: 5px 5px 0 0;
 }
 .card__description {
   display: flex;
@@ -45,6 +47,7 @@
   color: #fff;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  border-radius: 0 0 5px 5px;
 }
 .card__description:after {
   content: "";
