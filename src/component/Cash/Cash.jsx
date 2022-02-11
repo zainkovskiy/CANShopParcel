@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
+import { Link } from 'react-router-dom';
 import './Cash.css';
+
 import CardBasket from '../CardBasket/CardBasket';
 
 class Cash extends Component{
@@ -32,7 +33,7 @@ class Cash extends Component{
                   removeInCartShop={removeInCartShop}
                 />) : 'Корзина пуста'}
             </div>
-            <span className={`btn order__btn ${cartShop.length === 0 && 'disabled'}`}>оформить заказ</span>
+            <Link className={`btn order__btn ${cartShop.length === 0 && 'disabled'}`} to={cartShop.length > 0 && '/order'}>оформить заказ</Link>
           </div>
         </div>
       </div>)
