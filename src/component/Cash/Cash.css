@@ -69,8 +69,8 @@
   display: flex;
   top: 4rem;
   right: -1rem;
-  width: max-content;
-  max-height: 50vh;
+  width: 300px;
+  max-height: 60vh;
   overflow: auto;
   min-height: 100px;
   flex-direction: column;

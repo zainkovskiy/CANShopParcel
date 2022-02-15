@@ -1,19 +1,13 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import React from "react";
 import './Cash.css';
 
 import CardBasket from '../CardBasket/CardBasket';
 
-class Cash extends Component{
-  state = {
-    showShopCart: false,
-  }
-  handlerBasketBtn = () => {
-    this.setState({showShopCart: !this.state.showShopCart})
-  }
-  render() {
-    const { limit, cartShop, cartShopTotal, addInCartShop, removeInCartShop } = this.props;
-    const { showShopCart } = this.state;
+function Cash (props){
+
+    const { limit, cartShop, cartShopTotal, addInCartShop,
+      removeInCartShop, changeOpenModule,handlerBasketBtn,
+      showShopCart, getDiscount } = props;
     return (
       <div className="cash">
         <p className="limit">Доступный лимит <span>{ limit } руб.</span></p>
@@ -21,7 +15,7 @@ class Cash extends Component{
           <span className="basket__price">{ cartShopTotal } руб.</span>
           <span
             className="basket__btn"
-            onClick={this.handlerBasketBtn}>
+            onClick={handlerBasketBtn}>
           </span>
           <div className={`shop-cart ${!showShopCart && 'inVisible'}`}>
             <div className="shop-cart__items">
@@ -33,11 +27,15 @@ class Cash extends Component{
                   removeInCartShop={removeInCartShop}
                 />) : 'Корзина пуста'}
             </div>
-            <Link className={`btn order__btn ${cartShop.length === 0 && 'disabled'}`} to={cartShop.length > 0 && '/order'}>оформить заказ</Link>
+            <span
+              className={`btn order__btn ${cartShop.length === 0 && 'disabled'}`}
+              onClick={ () => {changeOpenModule(); handlerBasketBtn(); getDiscount()}}
+            >
+              оформить заказ
+            </span>
           </div>
         </div>
       </div>)
-  }
 }
 
 export default Cash;

@@ -23,14 +23,14 @@ class Card extends Component{
            <div className='card__check'>
              <label>
                <input name='card__photo_banner' type="radio"
-                      checked={ card.color === 'blue' ? true : false }
+                      checked={ card.color === 'blue' }
                       onChange={changeIsBlue}/>
                <span className="banner banner_blue">
                </span>
              </label>
              <label>
                <input name='card__photo_banner' type="radio"
-                      checked={ card.color === 'red' ? true : false }
+                      checked={ card.color === 'red' }
                       onChange={changeIsBlue}/>
                <span className="banner banner_red">
                </span>
