@@ -4,13 +4,21 @@ import Header from '../Header/Header';
 import Cash from '../Cash/Cash';
 import Content from "../Content/Content";
 import Preloader from "../Preloader/Preloader";
+import Modal from '../Modal/Modal';
 
 class App extends Component{
   state = {
     limit: '',
+    preloaderStart: false,
+    preloaderModal: false,
     cartShop: [],
     cartShopTotal: 0,
+    cartShopTotalQuantity: 0,
     cardProduct: [],
+    showShopCart: false,
+    openModal: false,
+    discount: '',
+    orderUID: '',
   }
   addInCartShop = (event) => {
     const dataset = event.target.dataset;
@@ -28,8 +36,11 @@ class App extends Component{
         quantity: 1
       })
     }
-    this.setState({cartShop: shopCart});
-    this.setState({cartShopTotal: this.state.cartShopTotal + +dataset.price});
+    this.setState({
+      cartShop: shopCart,
+      cartShopTotal: this.state.cartShopTotal + +dataset.price,
+      cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
+    });
   }
   removeInCartShop = (event) => {
     const dataset = event.target.dataset;
@@ -39,17 +50,67 @@ class App extends Component{
       find.quantity--;
     } else {
       shopCart.splice(shopCart.indexOf(find), 1);
+      shopCart.length === 0 && this.setState({showShopCart: this.state.openModal = false});
     }
-    this.setState({cartShop: shopCart});
-    this.setState({cartShopTotal: this.state.cartShopTotal - +dataset.price});
+    this.setState({
+      cartShop: shopCart,
+      cartShopTotalQuantity: this.state.cartShopTotalQuantity - 1,
+      cartShopTotal: this.state.cartShopTotal - +dataset.price
+    });
+  }
+
+  handlerBasketBtn = () => {
+    this.setState({showShopCart: !this.state.showShopCart})
+  }
+  changeOpenModule = () => {
+    this.setState({openModal: !this.state.openModal})
+  }
+
+  getDiscount = () => {
+    // this.setState({preloaderModal: true})
+    // this.getData(data => {
+    //   this.setState({discount: data.discount, orderUID: data.UID, preloaderModal: false})
+    // }, {
+    //   action : "startTransaction",
+    //   userId : 2921,
+    //   price : this.state.cartShopTotal
+    // })
+  }
+  productPay = () => {
+    this.setState({preloaderModal: true})
+    this.getData(data => {
+      console.log(data)
+      this.setState({preloaderModal: true})
+      this.changeOpenModule();
+    }, {
+      action: 'commitTransaction',
+      UID: this.state.orderUID,
+      price: this.state.cartShopTotal - this.state.discount,
+      items: this.state.cartShop,
+    })
+  }
+
+  getData(callback, requestData){
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://hs-01.centralnoe.ru/Project-Selket-Main/Servers/Market/Controller.php", true);
+
+    xhr.responseType = 'json';
+    xhr.send(JSON.stringify(requestData));
+
+    xhr.onload = () => {
+      callback(xhr.response);
+    };
   }
 
   render() {
-    const { limit, cartShop, cardProduct, cartShopTotal } = this.state;
+    const { limit, cartShop, cardProduct, preloaderModal,
+      cartShopTotal, openModal, showShopCart,
+      cartShopTotalQuantity, preloaderStart, discount } = this.state;
     return(
       <>
-        {limit && cardProduct.length > 0 ?
+        {!preloaderStart ?
           <>
+            <div className='container'>
             <Header/>
             <Cash
               limit={limit}
@@ -57,10 +118,28 @@ class App extends Component{
               addInCartShop={this.addInCartShop}
               removeInCartShop={this.removeInCartShop}
               cartShopTotal={cartShopTotal}
+              changeOpenModule={this.changeOpenModule}
+              handlerBasketBtn={this.handlerBasketBtn}
+              showShopCart={showShopCart}
+              getDiscount={this.getDiscount}
             />
             <Content
               cardProduct={cardProduct}
               addInCartShop={this.addInCartShop}
+            />
+            </div>
+            <Modal
+              cartShop={cartShop}
+              openModal={openModal}
+              cartShopTotal={cartShopTotal}
+              addInCartShop={this.addInCartShop}
+              removeInCartShop={this.removeInCartShop}
+              changeOpenModule={this.changeOpenModule}
+              cartShopTotalQuantity={cartShopTotalQuantity}
+              discount={discount}
+              productPay={this.productPay}
+              limit={limit}
+              preloaderModal={preloaderModal}
             />
           </> :
             <Preloader/>
@@ -70,9 +149,20 @@ class App extends Component{
   }
 
   componentDidMount() {
-    this.setState({cartShop: localStorage.getItem('cartShop') ? JSON.parse(localStorage.getItem('cartShop')) : []})
-    this.setState({cartShopTotal: localStorage.getItem('cartShopTotal') ? +localStorage.getItem('cartShopTotal') : 0})
-    this.setState({limit: 250});
+    this.setState({preloaderStart: true})
+    this.setState({cartShop: localStorage.getItem('cartShop') ? JSON.parse(localStorage.getItem('cartShop')) : []});
+    this.setState({cartShopTotal: localStorage.getItem('cartShopTotal') ? +localStorage.getItem('cartShopTotal') : 0});
+    this.setState({cartShopTotalQuantity: localStorage.getItem('cartShopTotalQuantity') ? +localStorage.getItem('cartShopTotalQuantity') : 0});
+    // this.getData(data => {
+    //   data.limits && this.setState({limit: data.limits});
+    //   this.setState({preloaderStart: false})
+    // }, {
+    //   action: 'getLimit',
+    //   userId: 2921,
+    //   userLogin: 'zainkovskiyaa',
+    // })
+    this.setState({limit: 700});
+    this.setState({preloaderStart: false})
     this.setState({cardProduct: [
         {
           id: 1,
@@ -200,6 +290,7 @@ class App extends Component{
   componentDidUpdate() {
     localStorage.setItem('cartShop', JSON.stringify(this.state.cartShop));
     localStorage.setItem('cartShopTotal', this.state.cartShopTotal);
+    localStorage.setItem('cartShopTotalQuantity', this.state.cartShopTotalQuantity);
   }
 }
 
