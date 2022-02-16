@@ -32,3 +32,24 @@ class Content extends Component{
 }
 
 export default Content;
+
+
+
+const arr = [
+  {
+    id: '0',
+    name:'banner',
+    price: '400',
+    image: 'url',
+    size: [
+      {'4x4': 200},
+      {'5x5': 300},
+      {'6x6': 400},
+    ],
+    color: [
+      {'red': 'url'},
+      {'blue': 'url'},
+    ]
+  },
+
+]

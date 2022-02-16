@@ -30,7 +30,7 @@ class Card extends Component{
              </label>
              <label>
                <input name='card__photo_banner' type="radio"
-                      checked={ card.color === 'red' }
+                      checked={ card.color === 'red'}
                       onChange={changeIsBlue}/>
                <span className="banner banner_red">
                </span>
