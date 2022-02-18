@@ -1,0 +1,68 @@
+[
+  {
+    "id":"kad4B",
+    "name":"Бейдж",
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/badge.png",
+    "price":105
+  },
+  {
+    "id":"npBSs",
+    "name":"Ежедневник",
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/diary.jpg",
+    "price":300
+  },
+  {
+    "id":"KFfZa",
+    "name":"Наклейка на авто",
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stiker.png",
+    "price":315
+  },
+  {
+    "id":"aOlk575-TUYPR5Q",
+    "name":"Баннер 2x1м",
+    "price":340,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg"
+  },
+  {
+    "id":"aOlk575-TUIXNo2",
+    "name":"Баннер 1.5x0.8м",
+    "price":255,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg"
+  },
+  {
+    "id":"aOlk575-TU_aoRh",
+    "name":"Баннер 1x0.7м",
+    "price":136,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg"
+  },
+  {
+    "id":"aOlk5cdOc-YPR5Q",
+    "name":"Баннер 2x1м",
+    "price":340,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg"
+  },
+  {
+    "id":"aOlk5cdOc-IXNo2",
+    "name":"Баннер 1.5x0.8м",
+    "price":255,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg"
+  },
+  {
+    "id":"aOlk5cdOc-_aoRh",
+    "name":"Баннер 1x0.7м",
+    "price":136,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg"
+  },
+  {
+    "id":"RWwEk",
+    "name":"Ручка",
+    "price":100,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/pens.jpg"
+  },
+  {
+    "id":"cFKx5",
+    "name":"Визитка",
+    "price":192,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/business_card.png"
+  }
+]

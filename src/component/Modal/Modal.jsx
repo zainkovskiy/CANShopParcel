@@ -21,9 +21,9 @@ function Modal (props) {
   const modalStyle = {
     top: `${window.pageYOffset}px`,
   };
-  return <div className={`modal ${openModal && 'modal_active'}`}>
+  return <div className={`modal ${openModal ? 'modal_active' : ''}`}>
             { !preloaderModal ?
-              <div className={`modal__window ${openModal && 'modal__window_active'}`}>
+              <div className={`modal__window ${openModal ? 'modal__window_active' : ''}`}>
               <div className="modal__header">
                 Корзина
                 <span
@@ -50,13 +50,13 @@ function Modal (props) {
                   { cartShopTotalQuantity }<i> </i>
                   { cartShopTotalQuantity[cartShopTotalQuantity.length - 1] === 1 ? 'позиция' : 'позиций'}<i> </i>
                   на сумму <i> </i>
-                  <span className={ limit < cartShopTotal - discount && 'modal__error' }>
+                  <span className={ limit < cartShopTotal - discount ? 'modal__error' : '' }>
                     { cartShopTotal - discount < 0 ? 0 : cartShopTotal - discount } руб.
                   </span>
                 </p>
                 <div className='modal__buttons'>
                   <button
-                    className={`modal__btn modal__btn_blue ${ limit < cartShopTotal - discount && 'modal__btn_disabled'}`}
+                    className={`modal__btn modal__btn_blue ${ limit < cartShopTotal - discount ? 'modal__btn_disabled' : ''}`}
                     onClick={ productPay }
                   >купить</button>
                   <button

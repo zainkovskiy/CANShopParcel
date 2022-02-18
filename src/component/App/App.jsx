@@ -5,6 +5,7 @@ import Cash from '../Cash/Cash';
 import Content from "../Content/Content";
 import Preloader from "../Preloader/Preloader";
 import Modal from '../Modal/Modal';
+import Snackbar from '../Snackbar/Snackbar';
 
 class App extends Component{
   state = {
@@ -19,33 +20,37 @@ class App extends Component{
     openModal: false,
     discount: '',
     orderUID: '',
+    openSnackbar: false,
   }
-  addInCartShop = (event) => {
-    const dataset = event.target.dataset;
+
+  addInCartShop = (id) => {
     const shopCart = this.state.cartShop;
-    const find = shopCart.find(item => item.id === dataset.id);
-    if (find) {
+    const find = shopCart.find(item => item.id === id);
+    if (find){
       find.quantity ++;
+      this.setState({
+        cartShop: shopCart,
+        cartShopTotal: this.state.cartShopTotal + +find.price,
+        cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
+      });
     } else {
-      shopCart.push({
-        id: dataset.id,
-        name: dataset.name,
-        price: dataset.price,
-        size: dataset.size,
-        background: dataset.background,
-        quantity: 1
+      fetch('https://crm.centralnoe.ru/dealincom/assets/json/CANShopSearchCard.json').then(res => {
+        res.json().then(data => {
+          const product = data.find(item => item.id === id);
+          product.quantity = 1;
+          shopCart.push(product);
+          this.setState({
+            cartShop: shopCart,
+            cartShopTotal: this.state.cartShopTotal + +product.price,
+            cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
+          });
+        })
       })
     }
-    this.setState({
-      cartShop: shopCart,
-      cartShopTotal: this.state.cartShopTotal + +dataset.price,
-      cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
-    });
   }
-  removeInCartShop = (event) => {
-    const dataset = event.target.dataset;
+  removeInCartShop = (id) => {
     const shopCart = this.state.cartShop;
-    const find = shopCart.find(item => item.id === dataset.id);
+    const find = shopCart.find(item => item.id === id);
     if (find.quantity > 1){
       find.quantity--;
     } else {
@@ -55,7 +60,7 @@ class App extends Component{
     this.setState({
       cartShop: shopCart,
       cartShopTotalQuantity: this.state.cartShopTotalQuantity - 1,
-      cartShopTotal: this.state.cartShopTotal - +dataset.price
+      cartShopTotal: this.state.cartShopTotal - +find.price
     });
   }
 
@@ -67,21 +72,25 @@ class App extends Component{
   }
 
   getDiscount = () => {
-    // this.setState({preloaderModal: true})
-    // this.getData(data => {
-    //   this.setState({discount: data.discount, orderUID: data.UID, preloaderModal: false})
-    // }, {
-    //   action : "startTransaction",
-    //   userId : 2921,
-    //   price : this.state.cartShopTotal
-    // })
+    this.setState({preloaderModal: true})
+    this.getData(data => {
+      this.setState({discount: data.discount, orderUID: data.UID, preloaderModal: false})
+    }, {
+      action : "startTransaction",
+      userId : 2921,
+      price : this.state.cartShopTotal
+    })
   }
   productPay = () => {
     this.setState({preloaderModal: true})
     this.getData(data => {
-      console.log(data)
-      this.setState({preloaderModal: true})
       this.changeOpenModule();
+      this.setState({openSnackbar: true, preloaderModal: false}, () => {
+        setTimeout(() => {
+          localStorage.clear();
+          location.reload();
+        },1000);
+      })
     }, {
       action: 'commitTransaction',
       UID: this.state.orderUID,
@@ -105,11 +114,12 @@ class App extends Component{
   render() {
     const { limit, cartShop, cardProduct, preloaderModal,
       cartShopTotal, openModal, showShopCart,
-      cartShopTotalQuantity, preloaderStart, discount } = this.state;
+      cartShopTotalQuantity, preloaderStart, discount, openSnackbar } = this.state;
     return(
       <>
         {!preloaderStart ?
           <>
+            <Snackbar open={openSnackbar}/>
             <div className='container'>
             <Header/>
             <Cash
@@ -153,139 +163,21 @@ class App extends Component{
     this.setState({cartShop: localStorage.getItem('cartShop') ? JSON.parse(localStorage.getItem('cartShop')) : []});
     this.setState({cartShopTotal: localStorage.getItem('cartShopTotal') ? +localStorage.getItem('cartShopTotal') : 0});
     this.setState({cartShopTotalQuantity: localStorage.getItem('cartShopTotalQuantity') ? +localStorage.getItem('cartShopTotalQuantity') : 0});
-    // this.getData(data => {
-    //   data.limits && this.setState({limit: data.limits});
-    //   this.setState({preloaderStart: false})
-    // }, {
-    //   action: 'getLimit',
-    //   userId: 2921,
-    //   userLogin: 'zainkovskiyaa',
-    // })
-    this.setState({limit: 700});
-    this.setState({preloaderStart: false})
-    this.setState({cardProduct: [
-        {
-          id: 1,
-          name: 'badge',
-          titleShot: "Бейдж",
-          titleFull: "Бейдж",
-          properties: [
-            {
-              id: 1,
-              price: 105,
-              size: '',
-            }
-          ],
-          background: "https://crm.centralnoe.ru/dealincom/assets/badge.png"
-        },
-       {
-          id: 2,
-          name: 'diary',
-          titleShot: "Ежедневник",
-          titleFull: "Ежедневник",
-          properties: [
-            {
-              id: 2,
-              price: 300,
-              size: '',
-            }
-          ],
-          background: "https://crm.centralnoe.ru/dealincom/assets/diary.jfif"
-        },
-        {
-          id: 3,
-          name: 'stiker',
-          titleShot: "Наклейка на авто",
-          titleFull: "Наклейка на авто 1x0.35мм",
-          properties: [
-            {
-              id: 3,
-              price: 315,
-              size: '',
-            }
-          ],
-          background: "https://crm.centralnoe.ru/dealincom/assets/stiker.png"
-        },
-        {
-          name: 'banner',
-          blue: {
-            id: 4,
-            titleShot: "Баннер",
-            titleFull: "Баннер",
-            properties: [
-              {
-                id: 4.1,
-                price: 340,
-                size: '2x1м',
-              },
-              {
-                id: 4.2,
-                price: 255,
-                size: '1.5x0.8м',
-              },
-              {
-                id: 4.3,
-                price: 136,
-                size: '1x0.7м',
-              }
-            ],
-            background: "https://crm.centralnoe.ru/dealincom/assets/banner_blue.jpg",
-            color: 'blue'
-          },
-          red: {
-            id: 5,
-            titleShot: "Баннер",
-            titleFull: "Баннер",
-            properties: [
-              {
-                id: 5.1,
-                price: 340,
-                size: '2x1м',
-              },
-              {
-                id: 5.2,
-                price: 255,
-                size: '1.5x0.8м',
-              },
-              {
-                id: 5.3,
-                price: 136,
-                size: '1x0.7м',
-              }
-            ],
-            background: "https://crm.centralnoe.ru/dealincom/assets/banner_red.jpg",
-            color: 'red'
-          },
-        },
-        {
-          id: 6,
-          name: 'pens',
-          titleShot: "Ручка",
-          titleFull: "Ручка брендировнная (5шт)",
-          properties: [
-            {
-              id: 6,
-              price: 100,
-              size: '',
-            }
-          ],
-          background: "https://crm.centralnoe.ru/dealincom/assets/pens.jfif"
-        },
-        {
-          id: 7,
-          name: 'business_card',
-          titleShot: "Визитка",
-          titleFull: "Визитка (96шт)",
-          properties: [
-            {
-              id: 7,
-              price: 192,
-              size: '',
-            }
-          ],
-          background: "https://crm.centralnoe.ru/dealincom/assets/business_card.png"
-        },
-      ]});
+    this.getData(user => {
+      user.limits && this.setState({limit: user.limits});
+      fetch('https://crm.centralnoe.ru/dealincom/assets/json/CANShopCardList.json').then(res => {
+        res.json().then(data => {
+          this.setState({
+            preloaderStart: false,
+            cardProduct: data
+          })
+        })
+      })
+    }, {
+      action: 'getLimit',
+      userId: 2921,
+      userLogin: 'zainkovskiyaa',
+    })
   }
   componentDidUpdate() {
     localStorage.setItem('cartShop', JSON.stringify(this.state.cartShop));

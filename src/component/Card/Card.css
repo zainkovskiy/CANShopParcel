@@ -91,6 +91,7 @@
   transition: display 0.3s;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 .card__btn {
@@ -105,27 +106,6 @@
 .card__btn:active {
   background-color: #484848;
   color: #fff;
-}
-
-input[type=radio] {
-  display: none;
-}
-input[type=radio]:checked + .banner {
-  border: 3px solid #fff;
-}
-
-.banner {
-  display: block;
-  height: 20px;
-  width: 20px;
-  border: 1px solid #fff;
-  cursor: pointer;
-}
-.banner_blue {
-  background-color: #0c54a0;
-}
-.banner_red {
-  background-color: #d61c22;
 }
 
 /*# sourceMappingURL=Card.css.map */
