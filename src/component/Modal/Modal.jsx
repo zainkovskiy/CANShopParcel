@@ -18,12 +18,10 @@ function Modal (props) {
   const { cartShop, openModal, addInCartShop, preloaderModal,
     removeInCartShop, changeOpenModule, cartShopTotalQuantity,
     cartShopTotal, discount, productPay, limit } = props;
-  const modalStyle = {
-    top: `${window.pageYOffset}px`,
-  };
   return <div className={`modal ${openModal ? 'modal_active' : ''}`}>
+            <div className={`modal__window ${openModal ? 'modal__window_active' : ''}`}>
             { !preloaderModal ?
-              <div className={`modal__window ${openModal ? 'modal__window_active' : ''}`}>
+              <>
               <div className="modal__header">
                 Корзина
                 <span
@@ -65,9 +63,10 @@ function Modal (props) {
                   >отмена</button>
                 </div>
               </div>
-            </div>
+              </>
               : <Preloader/>
             }
+            </div>
           </div>
 }
 

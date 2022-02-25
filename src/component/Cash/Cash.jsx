@@ -29,7 +29,7 @@ function Cash (props){
             </div>
             <span
               className={`btn order__btn ${cartShop.length === 0 && 'disabled'}`}
-              onClick={ () => {changeOpenModule(); handlerBasketBtn(); getDiscount()}}
+              onClick={ () => {getDiscount(); handlerBasketBtn(); changeOpenModule();}}
             >
               оформить заказ
             </span>
