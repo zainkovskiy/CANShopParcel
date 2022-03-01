@@ -43,7 +43,7 @@ class App extends Component{
             cartShop: shopCart,
             cartShopTotal: this.state.cartShopTotal + +product.price,
             cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
-          });
+          })
         })
       })
     }
