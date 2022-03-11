@@ -77,7 +77,7 @@ class App extends Component{
       this.setState({discount: data.discount, orderUID: data.UID, preloaderModal: false})
     }, {
       action : "startTransaction",
-      userId : 2921,
+      userId : currentUserId,
       price : this.state.cartShopTotal
     })
   }
@@ -175,8 +175,8 @@ class App extends Component{
       })
     }, {
       action: 'getLimit',
-      userId: 2921,
-      userLogin: 'zainkovskiyaa',
+      userId: currentUserId,
+      userLogin: currentUserLogin,
     })
   }
   componentDidUpdate() {
