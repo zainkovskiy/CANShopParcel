@@ -94,7 +94,8 @@ class App extends Component{
     }, {
       action: 'commitTransaction',
       UID: this.state.orderUID,
-      price: this.state.cartShopTotal - this.state.discount,
+      price: this.state.cartShopTotal,
+      discount: this.state.discount,
       items: this.state.cartShop,
     })
   }
