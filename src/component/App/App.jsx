@@ -21,6 +21,7 @@ class App extends Component{
     discount: '',
     orderUID: '',
     openSnackbar: false,
+    textSnackbar: 'Товар добавлен в корзину',
   }
 
   addInCartShop = (id) => {
@@ -32,6 +33,7 @@ class App extends Component{
         cartShop: shopCart,
         cartShopTotal: this.state.cartShopTotal + +find.price,
         cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
+        openSnackbar: true,
       });
     } else {
       fetch('https://crm.centralnoe.ru/dealincom/assets/json/CANShopSearchCard.json').then(res => {
@@ -43,10 +45,14 @@ class App extends Component{
             cartShop: shopCart,
             cartShopTotal: this.state.cartShopTotal + +product.price,
             cartShopTotalQuantity: this.state.cartShopTotalQuantity + 1,
+            openSnackbar: true,
           })
         })
       })
     }
+    setTimeout(() => {
+      this.setState({openSnackbar: false,})
+    }, 1500)
   }
   removeInCartShop = (id) => {
     const shopCart = this.state.cartShop;
@@ -85,7 +91,7 @@ class App extends Component{
     this.setState({preloaderModal: true})
     this.getData(data => {
       this.changeOpenModule();
-      this.setState({openSnackbar: true, preloaderModal: false}, () => {
+      this.setState({openSnackbar: true, textSnackbar: 'Заказ добавлен', preloaderModal: false}, () => {
         setTimeout(() => {
           localStorage.clear();
           location.reload();
@@ -115,12 +121,12 @@ class App extends Component{
   render() {
     const { limit, cartShop, cardProduct, preloaderModal,
       cartShopTotal, openModal, showShopCart,
-      cartShopTotalQuantity, preloaderStart, discount, openSnackbar } = this.state;
+      cartShopTotalQuantity, preloaderStart, discount, openSnackbar, textSnackbar } = this.state;
     return(
       <>
         {!preloaderStart ?
           <>
-            <Snackbar open={openSnackbar}/>
+            <Snackbar open={openSnackbar} message={textSnackbar}/>
             <div className='container'>
             <Header/>
             <Cash
@@ -165,7 +171,7 @@ class App extends Component{
     this.setState({cartShopTotal: localStorage.getItem('cartShopTotal') ? +localStorage.getItem('cartShopTotal') : 0});
     this.setState({cartShopTotalQuantity: localStorage.getItem('cartShopTotalQuantity') ? +localStorage.getItem('cartShopTotalQuantity') : 0});
     this.getData(user => {
-      user.limits && this.setState({limit: user.limits});
+      user.limits ? this.setState({limit: user.limits}) : this.setState({limit: 0});
       fetch('https://crm.centralnoe.ru/dealincom/assets/json/CANShopCardList.json').then(res => {
         res.json().then(data => {
           this.setState({

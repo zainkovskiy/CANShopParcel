@@ -23,42 +23,42 @@
   {
     "id":"aOlk575-TUYPR5Q",
     "name":"Баннер 2x1м",
-    "price":340,
+    "price":536,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
     "color": "blue"
   },
   {
     "id":"aOlk575-TUIXNo2",
     "name":"Баннер 1.5x0.8м",
-    "price":255,
+    "price":344,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
     "color": "blue"
   },
   {
     "id":"aOlk575-TU_aoRh",
     "name":"Баннер 1x0.7м",
-    "price":136,
+    "price":224,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
     "color": "blue"
   },
   {
     "id":"aOlk5cdOc-YPR5Q",
     "name":"Баннер 2x1м",
-    "price":340,
+    "price":536,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
     "color": "red"
   },
   {
     "id":"aOlk5cdOc-IXNo2",
     "name":"Баннер 1.5x0.8м",
-    "price":255,
+    "price":344,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
     "color": "red"
   },
   {
     "id":"aOlk5cdOc-_aoRh",
     "name":"Баннер 1x0.7м",
-    "price":136,
+    "price":224,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
     "color": "red"
   },

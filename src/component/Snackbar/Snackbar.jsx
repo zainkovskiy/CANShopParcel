@@ -8,12 +8,12 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export default function CustomizedSnackbars(props) {
-  const { open } = props;
+  const { open, message } = props;
 
   return (
       <Snackbar open={open} autoHideDuration={6000} anchorOrigin={ {vertical: 'top', horizontal: 'right'} }>
         <Alert severity="success" sx={{ width: '100%' }}>
-          Заказ оформлен
+          { message }
         </Alert>
       </Snackbar>
   );
