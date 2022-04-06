@@ -10,6 +10,7 @@ import Snackbar from '../Snackbar/Snackbar';
 class App extends Component{
   state = {
     limit: '',
+    userType: '',
     preloaderStart: false,
     preloaderModal: false,
     cartShop: [],
@@ -121,7 +122,7 @@ class App extends Component{
   render() {
     const { limit, cartShop, cardProduct, preloaderModal,
       cartShopTotal, openModal, showShopCart,
-      cartShopTotalQuantity, preloaderStart, discount, openSnackbar, textSnackbar } = this.state;
+      cartShopTotalQuantity, preloaderStart, discount, openSnackbar, textSnackbar, userType } = this.state;
     return(
       <>
         {!preloaderStart ?
@@ -143,6 +144,7 @@ class App extends Component{
             <Content
               cardProduct={cardProduct}
               addInCartShop={this.addInCartShop}
+              userType={userType}
             />
             </div>
             <Modal
@@ -157,6 +159,7 @@ class App extends Component{
               productPay={this.productPay}
               limit={limit}
               preloaderModal={preloaderModal}
+              userType={userType}
             />
           </> :
             <Preloader/>
@@ -172,6 +175,7 @@ class App extends Component{
     this.setState({cartShopTotalQuantity: localStorage.getItem('cartShopTotalQuantity') ? +localStorage.getItem('cartShopTotalQuantity') : 0});
     this.getData(user => {
       user.limits ? this.setState({limit: user.limits}) : this.setState({limit: 0});
+      user.userType ? this.setState({userType: user.userType}) : this.setState({userType: 'Бекы'});
       fetch('https://crm.centralnoe.ru/dealincom/assets/json/CANShopCardList.json').then(res => {
         res.json().then(data => {
           this.setState({

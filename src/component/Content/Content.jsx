@@ -5,12 +5,12 @@ import './Content.css';
 import Card from '../Card/Card';
 
 function Content (props){
-    const { cardProduct, addInCartShop } = props;
+    const { cardProduct, addInCartShop, userType } = props;
     return (
       <div className="content">
         <span className="content__title">продукция</span>
         <div className="cards">
-          { cardProduct.map(card => <Card key={card.id} card={card} addInCartShop={addInCartShop}/>) }
+          { cardProduct.map(card => <Card key={card.id} card={card} addInCartShop={addInCartShop} userType={userType}/>) }
         </div>
       </div>
     )

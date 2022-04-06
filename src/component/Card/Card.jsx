@@ -25,9 +25,9 @@ class Card extends Component{
     })
   }
   render() {
-    const { card, addInCartShop } = this.props;
+    const { card, addInCartShop, userType } = this.props;
     return (
-      <div className="card">
+      <div className={`card ${userType === 'Стажер' && card.name === 'Ежедневник' ? 'inVisible' : ''}`}>
         <div className="card__photo" style={{backgroundImage: `url(${this.state.background})`}}>
         </div>
         <div className="card__description">
