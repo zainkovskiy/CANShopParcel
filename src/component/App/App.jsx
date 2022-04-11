@@ -70,6 +70,9 @@ class App extends Component{
       cartShopTotal: this.state.cartShopTotal - +find.price
     });
   }
+  clearCartShop = () => {
+    this.setState({cartShop: [], cartShopTotal: 0})
+  }
 
   handlerBasketBtn = () => {
     this.setState({showShopCart: !this.state.showShopCart})
@@ -140,6 +143,7 @@ class App extends Component{
               handlerBasketBtn={this.handlerBasketBtn}
               showShopCart={showShopCart}
               getDiscount={this.getDiscount}
+              clearCartShop={this.clearCartShop}
             />
             <Content
               cardProduct={cardProduct}

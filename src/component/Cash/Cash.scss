@@ -68,6 +68,22 @@
     color: #484848;
   }
 }
+
+.order__clear{
+  background-color: #484848;
+  color: #fff;
+  transition: background-color .3s,
+  color .3s;
+  &:active{
+    background-color: #484848;
+    color: #fff;
+  }
+  &:hover{
+    background-color: #fff;
+    color: #484848;
+  }
+}
+
 .shop-cart{
   position: absolute;
   display: flex;

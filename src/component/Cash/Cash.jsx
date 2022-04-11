@@ -7,7 +7,7 @@ function Cash (props){
 
     const { limit, cartShop, cartShopTotal, addInCartShop,
       removeInCartShop, changeOpenModule,handlerBasketBtn,
-      showShopCart, getDiscount } = props;
+      showShopCart, getDiscount, clearCartShop } = props;
     return (
       <div className="cash">
         <p className="limit">Доступный лимит <span>{ limit } руб.</span></p>
@@ -32,6 +32,12 @@ function Cash (props){
               onClick={ () => {getDiscount(); handlerBasketBtn(); changeOpenModule();}}
             >
               оформить заказ
+            </span>
+            <span
+              className={`btn order__clear ${cartShop.length === 0 && 'disabled'}`}
+              onClick={ () => {clearCartShop()}}
+            >
+              очистить корзину
             </span>
           </div>
         </div>
