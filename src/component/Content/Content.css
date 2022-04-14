@@ -1,4 +1,4 @@
-.content__title {
+.content__title, .content__info {
   font-family: "montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -14,6 +14,14 @@
   padding: 0 0 1rem 0;
 }
 
+.content__info {
+  color: #484848;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
 .cards {
   display: -ms-grid;
   display: grid;
@@ -22,6 +30,6 @@
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=Content.css.map */

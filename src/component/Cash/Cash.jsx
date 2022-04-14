@@ -34,7 +34,7 @@ function Cash (props){
               оформить заказ
             </span>
             <span
-              className={`btn order__clear ${cartShop.length === 0 && 'disabled'}`}
+              className={`btn order__btn ${cartShop.length === 0 && 'disabled'}`}
               onClick={ () => {clearCartShop()}}
             >
               очистить корзину

@@ -12,12 +12,12 @@
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/diary.jpg","price":300
   },
   {"id":"KFfZa",
-    "name":"Наклейка на авто 1x0.35мм",
+    "name":"Наклейка на авто 1x0.35мм*",
     "size":"",
     "color":"",
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stiker.png","price":315},
   {"id":"aOlk5",
-    "name":"Баннер",
+    "name":"Баннер*",
     "color":[
       {"image":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
         "id":"75-TU",
@@ -51,7 +51,7 @@
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/pens.jpg"
   },
   {"id":"cFKx5",
-    "name":"Визитка (96шт)",
+    "name":"Визитка (96шт)*",
     "color":"",
     "size":"",
     "price":192,
