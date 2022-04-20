@@ -1,0 +1,49 @@
+%font-regular{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.8px
+}
+
+%font-bold{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px
+}
+
+.footer{
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #0c54a0;
+  border-radius: 5px;
+  margin: 1rem 0 0 0;
+  &__link{
+    color: #fff;
+    text-decoration: none;
+    @extend %font-regular;
+    border-bottom: 1px solid transparent;
+    font-size: 12px;
+    &:hover{
+      border-bottom: 1px solid #fff;
+    }
+  }
+  &__list{
+    @extend %font-bold;
+    margin: 1rem 0 0 0;
+    padding: 0 0 0 1.2rem;
+    & li {
+      margin: 1rem 0;
+      @extend %font-regular;
+    }
+  }
+}
+
+
+@media (max-width: 480px){
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
+}

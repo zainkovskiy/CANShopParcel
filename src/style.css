@@ -17,7 +17,7 @@ body {
   font-style: normal;
 }
 
-.btn {
+.btn, .subtitle {
   font-family: "montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -43,9 +43,50 @@ body {
 .container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5rem;
+  border: 1px solid #484848;
+  border-radius: 5px;
+}
+
+.img_50 {
+  display: block;
+  width: 50%;
+  margin: 0.5rem 0 0 0;
+}
+
+.img_35 {
+  display: block;
+  width: 35%;
+  margin: 0.5rem 0 0 0;
 }
 
 .inVisible {
@@ -55,5 +96,12 @@ body {
 .disabled {
   pointer-events: none;
   opacity: .3;
+}
+
+@media (max-width: 480px) {
+  .img_50,
+  .img_35 {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

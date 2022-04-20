@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useReducer } from "react";
 
 import './Card.css'
 import ColorCheckbox from "../ColorCheckbox/ColorCheckbox";
@@ -27,7 +27,7 @@ class Card extends Component{
   render() {
     const { card, addInCartShop, userType } = this.props;
     return (
-      <div className={`card ${userType === 'Стажер' && card.name !== 'Баннер' ? 'inVisible' : ''}`}>
+      <div className={`card ${userType === 'Стажер' && card.name !== 'Баннер*' ? 'inVisible' : ''}`}>
         <div className="card__photo" style={{backgroundImage: `url(${this.state.background})`}}>
         </div>
         <div className="card__description">

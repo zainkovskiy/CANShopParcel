@@ -1,13 +1,15 @@
-body{
+body {
   margin: 0;
   position: relative;
 }
+
 @font-face {
   font-family: 'montserrat';
   src: url("fonts/Montserrat-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'montserrat';
   src: url("fonts/Montserrat-Bold.ttf");
@@ -15,7 +17,7 @@ body{
   font-style: normal;
 }
 
-%font-regular{
+%font-regular {
   font-family: "montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -23,13 +25,14 @@ body{
 }
 
 
-%font-bold{
+%font-bold {
   font-family: "montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.8px
 }
-.btn{
+
+.btn {
   border: 1px solid #484848;
   border-radius: 5px;
   padding: 0.5rem 1rem;
@@ -42,16 +45,55 @@ body{
   text-align: center;
   text-decoration: none;
 }
-.container{
+
+.container {
   max-width: 1170px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.inVisible{
+
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: 1px solid rgb(72, 72, 72);
+  border-radius: 5px;
+  @extend %font-bold;
+}
+
+.img_50 {
+  display: block;
+  width: 50%;
+  margin: 0.5rem 0 0 0;
+}
+
+.img_35 {
+  display: block;
+  width: 35%;
+  margin: 0.5rem 0 0 0;
+}
+
+.inVisible {
   display: none;
 }
-.disabled{
+
+.disabled {
   pointer-events: none;
   opacity: .3;
+}
+
+@media (max-width: 480px) {
+
+  .img_50,
+  .img_35 {
+    width: 100%;
+  }
 }

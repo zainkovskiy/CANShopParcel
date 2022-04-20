@@ -49,6 +49,11 @@
     &:hover{
       transform: scale(1.2);
     }
+    &-order{
+      background-color: #0c54a0;
+      border-radius: 5px;
+      display: inline-block;
+    }
   }
   &__price{
     font-size: 12px;

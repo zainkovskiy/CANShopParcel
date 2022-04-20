@@ -11,6 +11,7 @@ export default function CardPlan(){
     <div className="card__description">
       <div className="card__description-text">
         <span className="card__title">Планировки</span>
+        <span class="card__price">0 руб.</span>
       </div>
     </div>
     <div className="card__buttons">

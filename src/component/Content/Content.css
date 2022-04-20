@@ -27,8 +27,6 @@
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
   grid-gap: 1rem;
   margin: 1rem 0;
 }

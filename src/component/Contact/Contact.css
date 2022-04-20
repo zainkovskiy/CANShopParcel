@@ -1,0 +1,62 @@
+.contact__title, .contact__row span {
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+
+.contact__row {
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  max-width: 60%;
+  margin: 1rem auto 0 auto;
+}
+
+.contact__title {
+  text-align: center;
+  font-size: 24px;
+}
+
+.contact__title span {
+  display: block;
+}
+
+.contact__row {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__row span {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=Contact.css.map */

@@ -1,0 +1,51 @@
+%font-regular{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.8px
+}
+
+%font-bold{
+  font-family: "montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 60%;
+  margin: 1rem auto 0 auto;
+  &__title{
+    text-align: center;
+    @extend %font-regular;
+    font-size: 24px;
+    & span{
+      display: block;
+    }
+  }
+  &__row{
+    @extend %font-bold;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    & span{
+      @extend %font-regular;
+      font-size: 16px;
+    }
+  }
+
+}
+
+@media (max-width: 768px){
+  .contact{
+    width: 100%;
+  }
+}
