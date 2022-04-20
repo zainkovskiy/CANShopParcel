@@ -23,7 +23,7 @@ export default function Refund() {
   return (
     <>
       <div className="subtitle">
-        Способ оплаты
+        Возврат денежных средств
         <Button
           onClick={() => navigate('/brand_store')}
           variant="text"
