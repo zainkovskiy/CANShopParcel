@@ -56,5 +56,19 @@
     "size":"",
     "price":278.4,
     "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/business_card.png"
+  },
+  {"id":"4980ae59",
+    "name":"Колышки для продажи земельного участка A3",
+    "color":"",
+    "size":"",
+    "price":275,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg"
+  },
+  {"id":"13a6ae4c",
+    "name":"Папка-конверт A4",
+    "color":"",
+    "size":"",
+    "price":35,
+    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/folder.jpg"
   }
 ]
