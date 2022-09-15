@@ -1,74 +1,95 @@
 [
-  {"id":"kad4B",
-    "name":"Бейдж",
-    "size":"",
-    "color":"",
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/badge.png","price":105
+  {
+    "id": "kad4B",
+    "name": "Бейдж",
+    "size": "",
+    "color": "",
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/badge.png",
+    "price": 105
   },
-  {"id":"npBSs",
-    "name":"Ежедневник",
-    "size":"",
-    "color":"",
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/diary.jpg","price":300
+  {
+    "id": "npBSs",
+    "name": "Ежедневник",
+    "size": "",
+    "color": "",
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/diary.jpg",
+    "price": 300
   },
-  {"id":"KFfZa",
-    "name":"Наклейка на авто 1x0.35мм*",
-    "size":"",
-    "color":"",
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stiker.png","price":315},
-  {"id":"aOlk5",
-    "name":"Баннер*",
-    "color":[
-      {"image":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
-        "id":"75-TU",
-        "color":"#0c54a0"
+  {
+    "id": "KFfZa",
+    "name": "Наклейка на авто 1x0.35мм*",
+    "size": "",
+    "color": "",
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stiker.png",
+    "price": 315
+  },
+  {
+    "id": "aOlk5",
+    "name": "Баннер*",
+    "color": [
+      {
+        "image": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+        "id": "75-TU",
+        "color": "#0c54a0"
       },
-      {"image":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
-        "id":"cdOc-",
-        "color":"#d61c22"
-      }],
-    "size":[
-      {"size":"2x1м",
-        "price":536,
-        "id":"YPR5Q"
+      {
+        "image": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+        "id": "cdOc-",
+        "color": "#d61c22"
+      }
+    ],
+    "size": [
+      { "size": "2x1м", "price": 480, "id": "YPR5Q" },
+      { "size": "2x1м + монтаж", "price": 1980, "id": "fd849" },
+      { "size": "1.5x0.8м", "price": 304, "id": "IXNo2" },
+      { "size": "1.5x0.8м + монтаж", "price": 1804, "id": "47e3c" },
+      { "size": "1x0.7м", "price": 194, "id": "_aoRh" },
+      { "size": "1x0.7м + монтаж", "price": 1694, "id": "3e7a6" }
+    ],
+    "price": 536,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg"
+  },
+  {
+    "id": "RWwEk",
+    "name": "Ручка брендировнная (5шт)",
+    "color": "",
+    "size": "",
+    "price": 100,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/pens.jpg"
+  },
+  {
+    "id": "cFKx5",
+    "name": "Визитка (96шт)*",
+    "color": "",
+    "size": "",
+    "price": 278.4,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/business_card.png"
+  },
+  {
+    "id": "4980ae59",
+    "name": "Колышки A3",
+    "color": [
+      {
+        "image": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg",
+        "id": "75-TU",
+        "color": "#0c54a0"
       },
-      {"size":"1.5x0.8м",
-        "price":344,
-        "id":"IXNo2"
-      },
-      {"size":"1x0.7м",
-        "price":224,
-        "id":"_aoRh"
-      }],
-    "price":536,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg"
+      {
+        "image": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg",
+        "id": "cdOc-",
+        "color": "#d61c22"
+      }
+    ],
+    "size": "",
+    "price": 275,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg"
   },
-  {"id":"RWwEk",
-    "name":"Ручка брендировнная (5шт)",
-    "color":"",
-    "size":"",
-    "price":100,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/pens.jpg"
-  },
-  {"id":"cFKx5",
-    "name":"Визитка (96шт)*",
-    "color":"",
-    "size":"",
-    "price":278.4,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/business_card.png"
-  },
-  {"id":"4980ae59",
-    "name":"Колышки для продажи земельного участка A3",
-    "color":"",
-    "size":"",
-    "price":275,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg"
-  },
-  {"id":"13a6ae4c",
-    "name":"Папка-конверт A4",
-    "color":"",
-    "size":"",
-    "price":35,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/folder.jpg"
+  {
+    "id": "13a6ae4c",
+    "name": "Папка-конверт A4",
+    "color": "",
+    "size": "",
+    "price": 35,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/folder.jpg"
   }
 ]

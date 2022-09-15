@@ -1,91 +1,142 @@
 [
   {
-    "id":"kad4B",
-    "name":"Бейдж",
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/badge.png",
-    "price":105,
+    "id": "kad4B",
+    "name": "Бейдж",
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/badge.png",
+    "price": 105,
     "color": ""
   },
   {
-    "id":"npBSs",
-    "name":"Ежедневник",
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/diary.jpg",
-    "price":300,
+    "id": "npBSs",
+    "name": "Ежедневник",
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/diary.jpg",
+    "price": 300,
     "color": ""
   },
   {
-    "id":"KFfZa",
-    "name":"Наклейка на авто",
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stiker.png",
-    "price":315,
+    "id": "KFfZa",
+    "name": "Наклейка на авто",
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stiker.png",
+    "price": 315,
     "color": ""
   },
   {
-    "id":"aOlk575-TUYPR5Q",
-    "name":"Баннер 2x1м",
-    "price":536,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+    "id": "aOlk575-TUYPR5Q",
+    "name": "Баннер 2x1м",
+    "price": 480,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
     "color": "blue"
   },
   {
-    "id":"aOlk575-TUIXNo2",
-    "name":"Баннер 1.5x0.8м",
-    "price":344,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+    "id": "aOlk575-TUIXNo2",
+    "name": "Баннер 1.5x0.8м",
+    "price": 304,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
     "color": "blue"
   },
   {
-    "id":"aOlk575-TU_aoRh",
-    "name":"Баннер 1x0.7м",
-    "price":224,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+    "id": "aOlk575-TU_aoRh",
+    "name": "Баннер 1x0.7м",
+    "price": 194,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
     "color": "blue"
   },
   {
-    "id":"aOlk5cdOc-YPR5Q",
-    "name":"Баннер 2x1м",
-    "price":536,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+    "id": "aOlk575-TUfd849",
+    "name": "Баннер 2x1м + монтаж",
+    "price": 1980,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+    "color": "blue"
+  },
+  {
+    "id": "aOlk575-TU47e3c",
+    "name": "Баннер 1.5x0.8м + монтаж",
+    "price": 1804,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+    "color": "blue"
+  },
+  {
+    "id": "aOlk575-TU3e7a6",
+    "name": "Баннер 1x0.7м + монтаж",
+    "price": 1694,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_blue.jpg",
+    "color": "blue"
+  },
+  {
+    "id": "aOlk5cdOc-YPR5Q",
+    "name": "Баннер 2x1м",
+    "price": 480,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
     "color": "red"
   },
   {
-    "id":"aOlk5cdOc-IXNo2",
-    "name":"Баннер 1.5x0.8м",
-    "price":344,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+    "id": "aOlk5cdOc-IXNo2",
+    "name": "Баннер 1.5x0.8м",
+    "price": 304,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
     "color": "red"
   },
   {
-    "id":"aOlk5cdOc-_aoRh",
-    "name":"Баннер 1x0.7м",
-    "price":224,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+    "id": "aOlk5cdOc-_aoRh",
+    "name": "Баннер 1x0.7м",
+    "price": 194,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
     "color": "red"
   },
   {
-    "id":"RWwEk",
-    "name":"Ручка",
-    "price":100,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/pens.jpg",
+    "id": "aOlk5cdOc-fd849",
+    "name": "Баннер 2x1м + монтаж",
+    "price": 1980,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+    "color": "red"
+  },
+  {
+    "id": "aOlk5cdOc-47e3c",
+    "name": "Баннер 1.5x0.8м + монтаж",
+    "price": 1804,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+    "color": "red"
+  },
+  {
+    "id": "aOlk5cdOc-3e7a6",
+    "name": "Баннер 1x0.7м + монтаж",
+    "price": 1694,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/banner_red.jpg",
+    "color": "red"
+  },
+  {
+    "id": "RWwEk",
+    "name": "Ручка",
+    "price": 100,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/pens.jpg",
     "color": ""
   },
   {
-    "id":"cFKx5",
-    "name":"Визитка",
-    "price":278.4,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/business_card.png",
+    "id": "cFKx5",
+    "name": "Визитка",
+    "price": 278.4,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/business_card.png",
     "color": ""
   },
-  {"id":"4980ae59",
-    "name":"Колышки A3",
-    "color":"",
-    "price":275,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg"
+  {
+    "id": "4980ae5975-TU",
+    "name": "Колышки A3 синие",
+    "color": "blue",
+    "price": 275,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg"
   },
-  {"id":"13a6ae4c",
-    "name":"Папка-конверт A4",
-    "color":"",
-    "price":35,
-    "background":"https://crm.centralnoe.ru/dealincom/assets/canshopimg/folder.jpg"
+  {
+    "id": "4980ae59cdOc-",
+    "name": "Колышки A3 красные",
+    "color": "red",
+    "price": 275,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/stake.jpg"
+  },
+  {
+    "id": "13a6ae4c",
+    "name": "Папка-конверт A4",
+    "color": "",
+    "price": 35,
+    "background": "https://crm.centralnoe.ru/dealincom/assets/canshopimg/folder.jpg"
   }
 ]
