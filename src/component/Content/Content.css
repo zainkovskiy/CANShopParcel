@@ -1,4 +1,4 @@
-.content__title, .content__info {
+.content__info, .content__title {
   font-family: "montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -13,7 +13,6 @@
   border-bottom: 1px solid #484848;
   padding: 0 0 1rem 0;
 }
-
 .content__info {
   color: #484848;
   font-size: 16px;
@@ -23,11 +22,8 @@
 }
 
 .cards {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1rem;
   margin: 1rem 0;
-}
-/*# sourceMappingURL=Content.css.map */
+}/*# sourceMappingURL=Content.css.map */

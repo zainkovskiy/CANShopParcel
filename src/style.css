@@ -4,20 +4,18 @@ body {
 }
 
 @font-face {
-  font-family: 'montserrat';
+  font-family: "montserrat";
   src: url("fonts/Montserrat-Regular.ttf");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'montserrat';
+  font-family: "montserrat";
   src: url("fonts/Montserrat-Bold.ttf");
   font-weight: 700;
   font-style: normal;
 }
-
-.btn, .subtitle {
+.subtitle, .btn {
   font-family: "montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -44,36 +42,21 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   padding: 1rem 1rem 0 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .subtitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0.5rem;
-  border: 1px solid #484848;
+  border: 1px solid rgb(72, 72, 72);
   border-radius: 5px;
 }
 
@@ -95,13 +78,12 @@ body {
 
 .disabled {
   pointer-events: none;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 @media (max-width: 480px) {
   .img_50,
-  .img_35 {
+.img_35 {
     width: 100%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

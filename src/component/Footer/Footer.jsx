@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import './Footer.css';
 
-export default function Footer(){
-  return(
+export default function Footer() {
+  return (
     <nav className="footer">
       <Link className="footer__link" to='brand_store/order'>Как сделать заказ</Link>
       <Link className="footer__link" to='brand_store/payment'>Способ оплаты</Link>
@@ -12,6 +12,11 @@ export default function Footer(){
       <Link className="footer__link" to='brand_store/delivery'>Доставка</Link>
       <Link className="footer__link" to='brand_store/refund'>Возврат денежных средств</Link>
       <Link className="footer__link" to='brand_store/contact'>Контакты</Link>
+      <a
+        className="footer__link"
+        href="https://crm.centralnoe.ru/LimitsPay/"
+        target="_blank"
+      >Пополнить</a>
     </nav>
   )
 }

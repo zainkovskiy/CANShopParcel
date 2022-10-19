@@ -1,8 +1,7 @@
-input[type="radio"] {
+input[type=radio] {
   display: none;
 }
-
-input[type="radio"]:checked + .checkbox {
+input[type=radio]:checked + .checkbox {
   border: 3px solid #fff;
 }
 
@@ -13,12 +12,9 @@ input[type="radio"]:checked + .checkbox {
   border: 1px solid #fff;
   cursor: pointer;
 }
-
 .checkbox_blue {
   background-color: #0c54a0;
 }
-
 .checkbox_red {
   background-color: #d61c22;
-}
-/*# sourceMappingURL=ColorCheckbox.css.map */
+}/*# sourceMappingURL=ColorCheckbox.css.map */

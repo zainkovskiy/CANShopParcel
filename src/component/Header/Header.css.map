@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,IAAI;CACb",
-    "sources": [
-        "Header.scss"
-    ],
-    "names": [],
-    "file": "Header.css"
-}
+{"version":3,"sources":["Header.scss","Header.css"],"names":[],"mappings":"AAAA;EACE,YAAA;ACCF","file":"Header.css"}
