@@ -12,9 +12,9 @@ import Paper from '@mui/material/Paper';
 
 const spanStyle = {
   margin: '1rem 0px 0px 0px',
-  'font-family': 'montserrat',
-  'font-weight': 400,
-  'letter-spacing': '0.8px',
+  fontFamily: 'montserrat',
+  fontWeight: 400,
+  letterSpacing: '0.8px',
   display: 'block',
 }
 

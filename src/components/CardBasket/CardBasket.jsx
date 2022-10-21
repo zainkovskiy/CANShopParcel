@@ -1,8 +1,8 @@
 import React from "react";
 
-import './CardBasket.css';
+import './CardBasket.scss';
 
-function CardBasket (props) {
+export const CardBasket = (props) => {
   const { card, addInCartShop, removeInCartShop } = props;
   return(
     <div className="shop-cart__item">
@@ -28,5 +28,3 @@ function CardBasket (props) {
     </div>
   </div>)
 }
-
-export default CardBasket;

@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
 import './Modal.css';
-import CardBasket from "../CardBasket/CardBasket";
+import { CardBasket } from "components/CardBasket";
 import Preloader from "../Preloader/Preloader";
 
-function Modal (props) {
+export const Modal = (props) => {
   const { cartShop, openModal, addInCartShop, preloaderModal,
     removeInCartShop, changeOpenModule, cartShopTotalQuantity,
     cartShopTotal, discount, productPay, limit, userType } = props;
@@ -83,5 +83,3 @@ function Modal (props) {
             </div>
           </div>
 }
-
-export default Modal;

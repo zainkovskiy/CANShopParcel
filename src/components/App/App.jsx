@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
-import Cash from '../Cash/Cash';
+import { Cash } from 'components/Cash';
+import { OrderPlan } from 'components/OrderPlan';
 import Content from '../Content/Content';
 import Preloader from '../Preloader/Preloader';
-import Modal from '../Modal/Modal';
+import { Modal } from 'components/Modal';
 import Snackbar from '../Snackbar/Snackbar';
 import Footer from '../Footer/Footer';
 import Order from '../Order/Order';
@@ -15,7 +16,7 @@ import Dilivery from '../Dilivery/Dilivery';
 import Refund from '../Refund/Refund';
 import Contact from '../Contact/Contact';
 
-class App extends Component {
+export class App extends Component {
   state = {
     limit: '',
     userType: '',
@@ -230,6 +231,10 @@ class App extends Component {
                       path='brand_store/contact'
                       element={<Contact />}
                     />
+                    <Route
+                      path='brand_store/orderPlan'
+                      element={<OrderPlan />}
+                    />
                   </Routes>
                 </div>
                 <Footer />
@@ -311,4 +316,4 @@ class App extends Component {
   }
 }
 
-export default App;
+// export default App;

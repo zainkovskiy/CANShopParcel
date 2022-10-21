@@ -41,20 +41,20 @@ export default function Order() {
           <img className="img_35" src={card} />
         </li>
         <li>
-          Проверить свой заказ, нажав на корзину <span class="basket__btn basket__btn-order"></span> в правом верхнем углу.
+          Проверить свой заказ, нажав на корзину <span className="basket__btn basket__btn-order"></span> в правом верхнем углу.
           <img className="img_35" src={shopCart} />
           Отредактировать количество необходимого товара вы можете в корзине. 
           Для этого необходимо нажать значки &nbsp;
-          <span class="shop-cart__btn shop-cart__btn-minus" style={{ display: 'inline-block' }}></span> &nbsp;
+          <span className="shop-cart__btn shop-cart__btn-minus" style={{ display: 'inline-block' }}></span> &nbsp;
           или &nbsp;
-          <span class="shop-cart__btn shop-cart__btn-plus" style={{ display: 'inline-block' }}></span>
+          <span className="shop-cart__btn shop-cart__btn-plus" style={{ display: 'inline-block' }}></span>
         </li>
         <li>
-          Далее нажать кнопку Оформить заказ <span class="btn order__btn false" style={{display: 'inline-block'}}>оформить заказ</span>
+          Далее нажать кнопку Оформить заказ <span className="btn order__btn false" style={{display: 'inline-block'}}>оформить заказ</span>
         </li>
         <li>
           В появившемся окне необходимо проверить заказ, нажать кнопку Купить &nbsp;
-          <button class="modal__btn modal__btn_blue ">купить</button>
+          <button className="modal__btn modal__btn_blue ">купить</button>
           <img className="img_35" src={order} />
         </li>
       </ol>

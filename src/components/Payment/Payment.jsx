@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 const spanStyle = {
   margin: '1rem 0px 0px 0px',
-  'font-family': 'montserrat',
-  'font-weight': 400,
-  'letter-spacing': '0.8px',
+  fontFamily: 'montserrat',
+  fontWight: 400,
+  letterSpacing: '0.8px',
   display: 'block',
 }
 
