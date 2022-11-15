@@ -1,4 +1,6 @@
 import React from "react";
+import plus from '../../img/round_plus.svg';
+import minus from '../../img/round_minus.svg';
 
 import './CardBasket.scss';
 
@@ -14,14 +16,20 @@ export const CardBasket = (props) => {
       <span>{ +card.price * +card.quantity } руб.</span>
       <div className="shop-cart__item-quantity">
         <span
-          className="shop-cart__btn shop-cart__btn-minus"
+          className="shop-cart__btn"
           onClick={() => removeInCartShop(card.id)}
+          style={{
+            backgroundImage: `url(${minus})`}
+          }
         >
         </span>
           {card.quantity}
         <span
-          className="shop-cart__btn shop-cart__btn-plus"
+          className="shop-cart__btn"
           onClick={() => addInCartShop(card.id)}
+          style={{
+            backgroundImage: `url(${plus})`}
+          }
         >
         </span>
       </div>
